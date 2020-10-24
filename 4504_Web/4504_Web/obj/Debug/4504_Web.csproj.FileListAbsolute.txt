@@ -1,0 +1,15 @@
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\bin\4504_Web.dll
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\bin\4504_Web.pdb
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\obj\Debug\4504_Web.csprojResolveAssemblyReference.cache
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\obj\Debug\4504_Web.dll
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\obj\Debug\4504_Web.pdb
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\bin\EntityFramework.dll
+C:\Users\Yazilim\Desktop\Örnek Uygulamalar\4504_Web\4504_Web\bin\EntityFramework.xml
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\bin\4504_Web.dll.config
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\bin\4504_Web.dll
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\bin\4504_Web.pdb
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\bin\EntityFramework.dll
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\bin\EntityFramework.xml
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\obj\Debug\4504_Web.csprojResolveAssemblyReference.cache
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\obj\Debug\4504_Web.dll
+C:\Users\MIKROSTAR3\OneDrive\Masaüstü\SınıfProje\4504_Web\4504_Web\obj\Debug\4504_Web.pdb

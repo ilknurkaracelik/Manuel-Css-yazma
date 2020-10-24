@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SinifDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SinifDBModelStoreContainer">
+          <EntitySet Name="Kullanicilar" EntityType="SinifDBModel.Store.Kullanicilar" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vw_KullaniciGetir" EntityType="SinifDBModel.Store.vw_KullaniciGetir" store:Type="Views" store:Schema="dbo" store:Name="vw_KullaniciGetir">
+            <DefiningQuery>SELECT 
+      [vw_KullaniciGetir].[ID] AS [ID], 
+      [vw_KullaniciGetir].[AdiSoyadi] AS [AdiSoyadi], 
+      [vw_KullaniciGetir].[EMail] AS [EMail], 
+      [vw_KullaniciGetir].[sifre] AS [sifre], 
+      [vw_KullaniciGetir].[KayitTarihi] AS [KayitTarihi], 
+      [vw_KullaniciGetir].[MedeniHali] AS [MedeniHali]
+      FROM [dbo].[vw_KullaniciGetir] AS [vw_KullaniciGetir]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="200" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="200" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="200" />
+          <Property Name="KayitTarihi" Type="datetime" />
+          <Property Name="MedeniHali" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SinifDB.dbo.vw_KullaniciGetir' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vw_KullaniciGetir">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="200" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="200" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="200" />
+          <Property Name="KayitTarihi" Type="datetime" />
+          <Property Name="MedeniHali" Type="bit" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SinifDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SinifDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Kullanicilar" EntityType="SinifDBModel.Kullanicilar" />
+          <EntitySet Name="vw_KullaniciGetir" EntityType="SinifDBModel.vw_KullaniciGetir" />
+        </EntityContainer>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="EMail" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="sifre" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+          <Property Name="MedeniHali" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="vw_KullaniciGetir">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="EMail" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="sifre" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KayitTarihi" Type="DateTime" Precision="3" />
+          <Property Name="MedeniHali" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SinifDBModelStoreContainer" CdmEntityContainer="SinifDBEntities">
+          <EntitySetMapping Name="Kullanicilar">
+            <EntityTypeMapping TypeName="SinifDBModel.Kullanicilar">
+              <MappingFragment StoreEntitySet="Kullanicilar">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+                <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_KullaniciGetir">
+            <EntityTypeMapping TypeName="SinifDBModel.vw_KullaniciGetir">
+              <MappingFragment StoreEntitySet="vw_KullaniciGetir">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+                <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SinifDBModelStoreContainer" CdmEntityContainer="SinifDBEntities">
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="SinifDBModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_KullaniciGetir">
+      <EntityTypeMapping TypeName="SinifDBModel.vw_KullaniciGetir">
+        <MappingFragment StoreEntitySet="vw_KullaniciGetir">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

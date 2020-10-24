@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SinifDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SinifDBModelStoreContainer">
+    <EntitySet Name="Kullanicilar" EntityType="SinifDBModel.Store.Kullanicilar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vw_KullaniciGetir" EntityType="SinifDBModel.Store.vw_KullaniciGetir" store:Type="Views" store:Schema="dbo" store:Name="vw_KullaniciGetir">
+      <DefiningQuery>SELECT 
+      [vw_KullaniciGetir].[ID] AS [ID], 
+      [vw_KullaniciGetir].[AdiSoyadi] AS [AdiSoyadi], 
+      [vw_KullaniciGetir].[EMail] AS [EMail], 
+      [vw_KullaniciGetir].[sifre] AS [sifre], 
+      [vw_KullaniciGetir].[KayitTarihi] AS [KayitTarihi], 
+      [vw_KullaniciGetir].[MedeniHali] AS [MedeniHali]
+      FROM [dbo].[vw_KullaniciGetir] AS [vw_KullaniciGetir]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="200" />
+    <Property Name="EMail" Type="nvarchar" MaxLength="200" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="200" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="MedeniHali" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'SinifDB.dbo.vw_KullaniciGetir' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vw_KullaniciGetir">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="200" />
+    <Property Name="EMail" Type="nvarchar" MaxLength="200" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="200" />
+    <Property Name="KayitTarihi" Type="datetime" />
+    <Property Name="MedeniHali" Type="bit" />
+  </EntityType>
+</Schema>
